@@ -1,5 +1,7 @@
 # AV Translator — Fast
 
+![AV Translator Logo](assets/logo.png)
+
 Japanese → Indonesian SRT translator for GitHub Pages.
 
 - Batch translation up to 8 subtitles per inference call.
