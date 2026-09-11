@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090909">
+<link rel="icon" href="./assets/logo.png">
+<link rel="manifest" href="./manifest.webmanifest">
+<title>AV Translator</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="header">
+  <div class="brand">
+    <img src="./assets/logo.png" alt="AV Translator" class="logo">
+    <div><h1>AV Translator</h1><p>日本語 → Indonesia</p></div>
+  </div>
+</header>
+
+<main>
+<section class="card">
+  <h2>Subtitle Jepang</h2>
+  <p class="muted">Pilih file SRT atau tempel isi subtitle.</p>
+  <input id="file" type="file" accept=".srt,text/plain">
+  <div id="filename" class="filename">Belum ada file</div>
+  <textarea id="src" placeholder="Tempel isi subtitle .srt di sini..."></textarea>
+  <div class="row">
+    <button id="example" class="secondary">Contoh</button>
+    <button id="clear" class="secondary">Hapus</button>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Terjemahan</h2>
+  <p class="muted">Model NLLB-200 berjalan langsung di perangkat. Tidak memakai API key.</p>
+  <div class="progress"><div id="progress"></div></div>
+  <div id="status">Model belum dimuat.</div>
+  <button id="translate" class="primary">Muat Model &amp; Terjemahkan</button>
+  <div id="error" class="error"></div>
+</section>
+
+<section class="card">
+  <h2>Hasil Indonesia</h2>
+  <p class="muted">Timestamp SRT dipertahankan.</p>
+  <button id="download" class="secondary full" disabled>Download SRT</button>
+  <button id="copy" class="secondary full" disabled>Salin Hasil</button>
+  <textarea id="out" readonly placeholder="Hasil terjemahan muncul di sini..."></textarea>
+</section>
+</main>
+
+<script type="module" src="./app.js"></script>
+</body>
+</html>
